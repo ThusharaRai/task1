@@ -1,0 +1,59 @@
+GET http://localhost:4004/basic/ping
+
+###
+GET http://localhost:4004/basic/hello(to='Thush')
+
+###
+GET http://localhost:4004/basic/sum(a=5,b=3)
+
+###
+GET http://localhost:4004/rest/plain/theAnswer
+
+###
+GET http://localhost:4004/rest/plain
+
+
+### Test findMax action
+POST http://localhost:4004/rest/plain/findMax
+Content-Type: application/json
+
+{
+  "numbers": [4, 10, 12, 9, 3]
+}
+
+###
+GET http://localhost:4004/odata/v4/northbreeze/productInfo(id=60)
+
+###
+GET http://localhost:4004/odata/v4/northbreeze/productInfo(id=50)   - not done
+
+###
+GET http://localhost:4004/odata/v4/northbreeze/Suppliers(22)/Products
+
+###
+GET http://localhost:4004/odata/v4/northbreeze/Suppliers(4)/Products?$select=ProductName,UnitPrice
+
+###
+POST http://localhost:4004/odata/v4/northbreeze/selectProduct
+Content-Type: application/json
+
+{
+    "communityid": "Thushara Rai"
+}
+
+###
+GET http://localhost:4004/odata/v4/northbreeze/TotalProducts
+
+###
+GET http://localhost:4004/odata/v4/northbreeze/Products(40)/stockValue()
+
+
+
+
+
+
+
+
+
+
+
